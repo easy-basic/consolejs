@@ -2,6 +2,8 @@ import Prompt from './prompt';
 import HistoryManager from './history';
 import Drawing from './drawing';
 
+import './styles.css';
+
 class Terminal {
     constructor(element, options = {}) {
         if (typeof element == 'string') {

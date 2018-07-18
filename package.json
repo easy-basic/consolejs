@@ -1,0 +1,30 @@
+{
+  "name": "simple-console",
+  "version": "1.0.0",
+  "description": "A simple and light weight console.",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/easy-basic/consolejs.git"
+  },
+  "keywords": [],
+  "author": "Nauman Umer <nmanumr@gmail.com> (https://nmanumr.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/easy-basic/consolejs/issues"
+  },
+  "homepage": "https://github.com/easy-basic/consolejs#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^0.28.11",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.0.8"
+  }
+}
