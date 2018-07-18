@@ -1,0 +1,25 @@
+<div id="console" tabindex="-1">
+</div>
+
+<link rel="stylesheet" href="./stylesheet.css"></link>
+<script src="./src/terminal.js"></script>
+
+<script>
+    var terminal = new Terminal('#console', {
+        prompt: '> '
+    });
+
+    terminal.prompt.init();
+    terminal.addEventListener('onPrompt', function(e){
+        try{
+            var out = eval(e);
+            console.log(out);
+            terminal.write(out+'\n');
+        } catch(err){
+            terminal.write(err+'\n');
+        }
+        setTimeout(() => {
+            terminal.prompt.init();
+        }, 0);
+    })
+</script>

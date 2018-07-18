@@ -1,0 +1,19 @@
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Ubuntu Mono';
+}
+
+pre [contenteditable]{
+    border: none;
+    outline: none;
+}
+
+.prompt-label{
+    color: #729FCF;
+}
+
+#console{
+    height: 100%;
+    outline: none;
+}
