@@ -16,7 +16,9 @@ class Terminal {
 
         this.defaultColor = options.color || '#333';
         this.background = options.background || '#fff';
-        this.write(options.header || '');
+        this.banner = options.banner || '';
+        this.write(this.banner);
+
 
         this.listeners = new Map();
         this.prompt = new Prompt(this, options);
@@ -60,12 +62,22 @@ class Terminal {
         }
     }
 
+    setBanner(text){
+        this.banner = text;
+        this.clear();
+    }
+
     write(text, color) {
         text = text.toString();
         if (!color) color = this.defaultColor;
         for (var ch of text) {
             this.addToken(ch, color)
         }
+    }
+
+    clear(all){
+        this.console.innerHTML = '';
+        !all && this.write(this.banner);
     }
 
     addToken(ch, color, bg) {
